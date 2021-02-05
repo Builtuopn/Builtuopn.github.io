@@ -39,6 +39,13 @@
 
   
   <url>
+    <loc>https://builtuopn.github.io/tags/MySQL/</loc>
+    <lastmod>2021-02-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
     <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
@@ -52,14 +59,14 @@
     <priority>0.6</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://builtuopn.github.io/tags/MySQL/</loc>
+    <loc>https://builtuopn.github.io/categories/MySQL/</loc>
     <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
-  
-
   
   <url>
     <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
@@ -70,13 +77,6 @@
   
   <url>
     <loc>https://builtuopn.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2021-02-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/categories/MySQL/</loc>
     <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
