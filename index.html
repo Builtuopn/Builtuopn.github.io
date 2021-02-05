@@ -181,6 +181,201 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-WeChat/WeChat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/WeChat/WeChat/">微信小程序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/WeChat/WeChat/" class="archive-article-date">
+  	<time datetime="2021-02-05T12:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><blockquote>
+<p>1.底部导航栏的切换：tabBar<br>2. 页面之间的跳转：wx.navigateTo<br>3.上传图片chooseImage<br>4.url传值<br> url: ‘/pages/modify/modify?username=’+this.data.username+’&amp;gender=’+this.data.gender,<br>5.获取表单提交的数据bindsubmit。e.detail.value获取表单的全部数据<br>6. getCurrentPages()获取当前页面栈<br>    var pages = getCurrentPages()<br>        var prevPage = pages[pages.length - 2] //返回上一页数据<br>7.wx.navigateBack()关闭当前页面，返回上一页面或多级页面
+ </p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/微信小程序//" class="article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/WeChat/WeChat/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring boot/Spring boot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/Spring%20boot/Spring%20boot/">Spring boot</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/Spring%20boot/Spring%20boot/" class="archive-article-date">
+  	<time datetime="2021-02-05T12:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>SpringBoot是由Pivotal团队在2013年开始研发、2014年4月发布第一个版本的全新开源的轻量级框架。它基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。另外SpringBoot通过集成大量的框架使得依赖包的版本冲突，以及引用的不稳定性等问题得到了很好的解决。</p>
+</blockquote>
+<h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><blockquote>
+<p>（数据访问层）Mapper层：添加@Mapper注解，写数据库操作的方法（实现对数据库的操作）<br>（业务层）Service层：添加@Service注解，编写与Mapper方法一样的方法（一般跟Mapper的方法一样）<br>Serviceimpl接口实现类：实现Service接口，实现Service的方法，调用Mapper的方法，需要使用@Autowrie注入Mapper,调用方法<br>（控制层）Controller层：调用Service层的方法，要使用@Autowrie注入Service,调用其方法。</p>
+</blockquote>
+<img src="/images/fc1.png" width="50%" height="50%">
+
+<hr>
+<h1 id="SpringBoot-Mybatis-SpringMVC整合"><a href="#SpringBoot-Mybatis-SpringMVC整合" class="headerlink" title="SpringBoot+Mybatis+SpringMVC整合"></a>SpringBoot+Mybatis+SpringMVC整合</h1><img src="/images/SpringBoot+Mybatis+SpringMVC整合.png" width="50%" height="50%">
+
+<h1 id="mapper层"><a href="#mapper层" class="headerlink" title="mapper层"></a>mapper层</h1><img src="/images/5.Mapper层.png" width="50%" height="50%">
+
+<h1 id="Controller层"><a href="#Controller层" class="headerlink" title="Controller层"></a>Controller层</h1><img src="/images/2.Controller层.png" width="50%" height="50%">
+
+<h1 id="Service层"><a href="#Service层" class="headerlink" title="Service层"></a>Service层</h1><img src="/images/3.Service.png" width="50%" height="50%">
+
+<h1 id="业务层实现类ServiceImpl"><a href="#业务层实现类ServiceImpl" class="headerlink" title="业务层实现类ServiceImpl"></a>业务层实现类ServiceImpl</h1><img src="/images/4.ServiceImpl.png" width="50%" height="50%">
+
+<h1 id="视图层"><a href="#视图层" class="headerlink" title="视图层"></a>视图层</h1><img src="/images/5.视图index.png" width="50%" height="50%">
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring boot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Spring-boot//" class="article-tag-list-link color2">Spring boot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/Spring%20boot/Spring%20boot/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -592,6 +787,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring boot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
             
             <div class="clearfix"></div>
