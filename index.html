@@ -197,110 +197,190 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>查看现有数据库<br><code>1 | SHOW DATABASES;</code></li>
-<li>新建数据库<br><code>1 | CREATE DATABASE &lt;数据库名&gt;;</code></li>
-<li>选择数据库<br><code>1 | USE &lt;数据库名&gt;;</code></li>
-<li>从.sql文件引入SQL语句<br><code>1 | SOURCE &lt;.sql文件路径&gt;;</code></li>
-<li>删除数据库<br><code>1 | DROP DATABASE &lt;数据库名&gt;;;</code></li>
-<li>查看当前数据库中的表<br><code>1 | SHOW TABLES;</code></li>
-<li>创建新表<blockquote>
-<p>1 | CREATE TABLE &lt;表名&gt; (<br>2 | &lt;列名1&gt; &lt;列类型1&gt;,<br>3 | &lt;列名2&gt; &lt;列类型2&gt;,<br>4 | &lt;列名3&gt; &lt;列类型3&gt;,<br>5 | PRIMARY KEY (&lt;列名1&gt;),<br>6 | FOREIGN KEY (&lt;列名2&gt;) REFERENCES &lt;表名2&gt;(&lt;列名2&gt;<br>7 | );</p>
+        <blockquote>
+<p>查看现有数据库<br><code> SHOW DATABASES;</code></p>
 </blockquote>
-</li>
-</ol>
 <blockquote>
-<p>主键（PRIMARY KEY）用来标识一条记录（一行），所以每条记录的主键值必须是唯一的。主键可以定义在多列上，这称为联合主键（composite primary key）。如果我们把表视作具有某种结构的数组（例如，C语言中的struct），那么外键（FOREIGN KEY）可以视作指针<br>例子：<br>1 | CREATE TABLE instructor (<br>2 | ID CHAR(5),<br>3 | name VARCHAR(20) NOT NULL,<br>4 | dept_name VARCHAR(20),<br>5 | salary NUMERIC(8,2),<br>6 | PRIMARY KEY (ID),<br>7 |  FOREIGN KEY (dept_name) REFERENCES department(dept_name));<br>在上面的例子中，我们创建了一个教员（instructor）表，该表的主键是ID，外键是教员所在的部门名称（dept_name），关联部门（department）表。此外，教员表还包括姓名（name）、薪水（salary）。其中，姓名有约束NOT NULL，表示姓名这一项不能为空。<br>8. 概述表中的列<br>使用如下语句查看表中的列的基本信息：<br><code>1 | DESCRIBE &lt;表名&gt;;</code><br>下图显示了一些例子：<br>9.在表中插入新纪录<br><code>1 | INSERT INTO &lt;表名&gt; (&lt;列名1&gt;, &lt;列名2&gt;, &lt;列名3&gt;, …)VALUES (&lt;值1&gt;, &lt;值2&gt;, &lt;值3&gt;, …);</code><br>10.在表中更新记录<br>1 | UPDATE &lt;表名&gt;<br>2 |  SET &lt;列名1&gt; = &lt;值1&gt;, &lt;列名2&gt; = &lt;值2&gt;, …<br>3 |  WHERE &lt;条件&gt;;<br>11. 清空表<br>1 | DELETE FROM &lt;表名&gt;;<br>12. 删除表<br>1 | DROP TABLE &lt;表名&gt;;<br>13. SELECT<br>SELECT语句可以从表中选择数据：<br>1 | SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br>2 | FROM &lt;表名&gt;;<br>以下语句选择所有内容：<br>1 | SELECT * FROM &lt;表名&gt;;<br>14. SELECT DISTINCT<br>SELECT DISTINCT过滤掉了重复的值：<br>1 | SELECT DISTINCT &lt;列名1&gt;, &lt;列名2&gt;, …<br>2 | FROM &lt;表名&gt;;<br>15. WHERE<br>我们之前在更新记录时已经用到了WHERE关键字，用来指明条件。这里我们稍微详细一点地介绍下WHERE。<br>WHERE的条件通常是：<br>比较文本（text）<br>比较数字（numbers）<br>AND、OR、NOT等逻辑运算<br>让我们来看一些例子：<br>1 | SELECT * FROM course WHERE dept_name=’Comp. Sci.’;<br>2 | SELECT * FROM course WHERE credits&gt;3;<br>3 | SELECT * FROM course WHERE dept_name=’Comp. Sci.’ AND credits&gt;3;</p>
+<p>新建数据库<br><code> CREATE DATABASE &lt;数据库名&gt;;</code></p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="http://p1.pstatp.com/large/pgc-image/5ff35794c65a4495911ec5f35449c383">http://p1.pstatp.com/large/pgc-image/5ff35794c65a4495911ec5f35449c383</a><br>16. GROUP BY<br>GROUP BY语句可以分组结果，常用于COUNT、MAX、MIN、SUM、AVG等聚合函数（aggregate functions）。<br>1 | SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br>2 | FROM &lt;表名&gt;<br>3 | GROUP BY &lt;列名&gt;;<br>让我们来看一个例子，列出每个部门的课程数量：<br>1 | SELECT COUNT(course_id), dept_name<br>2 | FROM course<br>3 | GROUP BY dept_name;<br>17. HAVING<br>乍看起来，HAVING和WHERE很像：</p>
-<p>1 | SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br>2 | FROM &lt;表名&gt;<br>3 | GROUP BY &lt;列名x&gt;<br>4 | HAVING &lt;条件&gt;;</p>
+<blockquote>
+<p>选择数据库<br><code> USE &lt;数据库名&gt;;</code></p>
+</blockquote>
+<blockquote>
+<p>从.sql文件引入SQL语句<br><code> SOURCE &lt;.sql文件路径&gt;;</code></p>
+</blockquote>
+<blockquote>
+<p>删除数据库<br><code> DROP DATABASE &lt;数据库名&gt;;;</code></p>
+</blockquote>
+<blockquote>
+<p>查看当前数据库中的表<br><code> SHOW TABLES;</code></p>
+</blockquote>
+<blockquote>
+<p>创建新表</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt; (</span><br><span class="line">&lt;列名1&gt; &lt;列类型1&gt;,</span><br><span class="line">&lt;列名2&gt; &lt;列类型2&gt;,</span><br><span class="line">&lt;列名3&gt; &lt;列类型3&gt;,</span><br><span class="line">PRIMARY KEY (&lt;列名1&gt;),</span><br><span class="line">FOREIGN KEY (&lt;列名2&gt;) REFERENCES &lt;表名2&gt;(&lt;列名2&gt;</span><br><span class="line"> );</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>主键（PRIMARY KEY）用来标识一条记录（一行），所以每条记录的主键值必须是唯一的。主键可以定义在多列上，这称为联合主键（composite primary key）。如果我们把表视作具有某种结构的数组（例如，C语言中的struct），那么外键（FOREIGN KEY）可以视作指针</p>
+</blockquote>
+<blockquote>
+<p>例子：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE instructor (</span><br><span class="line"> ID CHAR(5),</span><br><span class="line"> name VARCHAR(20) NOT NULL,</span><br><span class="line"> dept_name VARCHAR(20),</span><br><span class="line"> salary NUMERIC(8,2),</span><br><span class="line"> PRIMARY KEY (ID),</span><br><span class="line"> FOREIGN KEY (dept_name) REFERENCES department(dept_name));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在上面的例子中，我们创建了一个教员（instructor）表，该表的主键是ID，外键是教员所在的部门名称（dept_name），关联部门（department）表。此外，教员表还包括姓名（name）、薪水（salary）。其中，姓名有约束NOT NULL，表示姓名这一项不能为空。</p>
+</blockquote>
+<blockquote>
+<p>概述表中的列<br>使用如下语句查看表中的列的基本信息：</p>
+</blockquote>
+<p><code> DESCRIBE &lt;表名&gt;;</code></p>
+<blockquote>
+<p>下图显示了一些例子：</p>
+</blockquote>
+<blockquote>
+<p>在表中插入新纪录</p>
+</blockquote>
+<p><code> INSERT INTO &lt;表名&gt; (&lt;列名1&gt;, &lt;列名2&gt;, &lt;列名3&gt;, …)VALUES (&lt;值1&gt;, &lt;值2&gt;, &lt;值3&gt;, …);</code></p>
+<blockquote>
+<p>在表中更新记录</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE &lt;表名&gt;</span><br><span class="line"> SET &lt;列名1&gt; &#x3D; &lt;值1&gt;, &lt;列名2&gt; &#x3D; &lt;值2&gt;, ...</span><br><span class="line"> WHERE &lt;条件&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>清空表</p>
+</blockquote>
+<p>  <code>DELETE FROM &lt;表名&gt;;</code></p>
+<blockquote>
+<p>删除表</p>
+</blockquote>
+<p> <code>DROP TABLE &lt;表名&gt;;</code></p>
+<blockquote>
+<p>SELECT<br>SELECT语句可以从表中选择数据：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line">FROM &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以下语句选择所有内容：</p>
+</blockquote>
+<p> <code>SELECT * FROM &lt;表名&gt;;</code></p>
+<blockquote>
+<p>SELECT DISTINCT<br>SELECT DISTINCT过滤掉了重复的值：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line">FROM &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>WHERE<br>我们之前在更新记录时已经用到了WHERE关键字，用来指明条件。这里我们稍微详细一点地介绍下WHERE。<br>WHERE的条件通常是：<br>比较文本（text）<br>比较数字（numbers）<br>AND、OR、NOT等逻辑运算<br>让我们来看一些例子：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM course WHERE dept_name&#x3D;&#39;Comp. Sci.&#39;;</span><br><span class="line">SELECT * FROM course WHERE credits&gt;3;</span><br><span class="line">SELECT * FROM course WHERE dept_name&#x3D;&#39;Comp. Sci.&#39; AND credits&gt;3;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://p1.pstatp.com/large/pgc-image/5ff35794c65a4495911ec5f35449c383">http://p1.pstatp.com/large/pgc-image/5ff35794c65a4495911ec5f35449c383</a></p>
+<blockquote>
+<p>GROUP BY<br>GROUP BY语句可以分组结果，常用于COUNT、MAX、MIN、SUM、AVG等聚合函数（aggregate functions）。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line">FROM &lt;表名&gt;</span><br><span class="line">GROUP BY &lt;列名&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>让我们来看一个例子，列出每个部门的课程数量：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT COUNT(course_id), dept_name </span><br><span class="line">FROM course </span><br><span class="line">GROUP BY dept_name;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>HAVING<br>乍看起来，HAVING和WHERE很像：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line">FROM &lt;表名&gt;</span><br><span class="line">GROUP BY &lt;列名x&gt;</span><br><span class="line">HAVING &lt;条件&gt;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>那么，HAVING和WHERE有什么不同呢？让我们先来看一个例子，列出开了不止一门课程的部门开设的课程数：</p>
 </blockquote>
-<p>1 | SELECT COUNT(course_id), dept_name<br>2 | FROM course<br>3 | GROUP BY dept_name<br>4 | HAVING COUNT(course_id)&gt;1;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> SELECT COUNT(course_id), dept_name </span><br><span class="line"> FROM course </span><br><span class="line"> GROUP BY dept_name </span><br><span class="line">HAVING COUNT(course_id)&gt;1;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这里HAVING不能换成WHERE，因为WHERE直接针对行操作，且在GROUP BY之前运行（即先通过WHERE筛选行，之后再将筛选出的行通过GROUP BY分组）。假设SQL中不存在HAVING语句，那么我们只能先新建一张表，将COUNT(course_id)作为新表的列，然后在新表上再通过WHERE进行筛选（当然，实际上SQL提供了派生表、CTE等机制，并不用真的手工建新表）。</p>
 </blockquote>
 <blockquote>
 <p>ORDER BY<br>ORDER BY可以对结果进行排序，在没有明确指定ASC（升序）或DESC（降序）的情况下，默认按升序排列。</p>
 </blockquote>
-<p>SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br>FROM &lt;表名&gt;<br>ORDER BY &lt;列名1&gt;, &lt;列名2&gt;, …, ASC|DESC;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line">FROM &lt;表名&gt;</span><br><span class="line">ORDER BY &lt;列名1&gt;, &lt;列名2&gt;, …, ASC|DESC;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>例子：</p>
 </blockquote>
-<p>SELECT * FROM course ORDER BY credits;<br>SELECT * FROM course ORDER BY credits DESC;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM course ORDER BY credits;</span><br><span class="line">SELECT * FROM course ORDER BY credits DESC;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>BETWEEN<br>BETWEEN语句用于指定区间。</p>
 </blockquote>
-<p>SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br> FROM &lt;表名&gt;<br> WHERE &lt;列名x&gt; BETWEEN &lt;值1&gt; AND &lt;值2&gt;;<br>其中“值”可能是数字，文本，乃至日期等。</p>
-<p>例如，列出薪资在50000和100000之间的教员：</p>
-<p>SELECT * FROM instructor WHERE salary BETWEEN 50000 AND 100000;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line"> FROM &lt;表名&gt;</span><br><span class="line"> WHERE &lt;列名x&gt; BETWEEN &lt;值1&gt; AND &lt;值2&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中“值”可能是数字，文本，乃至日期等。<br>例如，列出薪资在50000和100000之间的教员：</p>
+</blockquote>
+<p><code>SELECT * FROM instructor WHERE salary BETWEEN 50000 AND 100000;</code></p>
 <blockquote>
 <p>LIKE<br>LIKE用于匹配文本中的特定模式。</p>
 </blockquote>
-<p>SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br> FROM &lt;表名&gt;<br> WHERE &lt;列名x&gt; LIKE &lt;模式&gt;;<br>模式中可以使用以下两个通配符：</p>
-<p>% （零个、一个或多个字符）</p>
-<p>_ （单个字符）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line"> FROM &lt;表名&gt;</span><br><span class="line"> WHERE &lt;列名x&gt; LIKE &lt;模式&gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>模式中可以使用以下两个通配符：<br>% （零个、一个或多个字符）<br>_ （单个字符）</p>
+</blockquote>
 <blockquote>
 <p>例子：列出课程名中包含“to”的课程，以及课程ID以“CS-”开头的课程。</p>
 </blockquote>
-<p>SELECT * FROM course WHERE title LIKE ‘%to%’;<br>SELECT * FROM course WHERE course_id LIKE ‘CS-___’;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM course WHERE title LIKE &#39;%to%&#39;;</span><br><span class="line">SELECT * FROM course WHERE course_id LIKE &#39;CS-___&#39;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>IN<br>IN语句表示值属于某个集合。</p>
 </blockquote>
-<p>SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br> FROM &lt;表名&gt;<br> WHERE &lt;列名n&gt; IN (&lt;值1&gt;, &lt;值2&gt;, …);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line"> FROM &lt;表名&gt;</span><br><span class="line"> WHERE &lt;列名n&gt; IN (&lt;值1&gt;, &lt;值2&gt;, …);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>例子：列出计算机科学、物理、电子工程部门的学生。</p>
 </blockquote>
-<p>SELECT * FROM student WHERE dept_name IN (‘Comp. Sci.’, ‘Physics’, ‘Elec. Eng.’);</p>
+<p><code>SELECT * FROM student WHERE dept_name IN (&#39;Comp. Sci.&#39;, &#39;Physics&#39;, &#39;Elec. Eng.&#39;);</code></p>
 <blockquote>
 <p>JOIN<br>JOIN用来组合两张以上表中的值。下图展示了JOIN的三种类型：</p>
 </blockquote>
-<p>SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br> FROM &lt;表名1&gt;<br> JOIN &lt;表名2&gt;<br> ON &lt;表名1.列名x&gt; = &lt;表名2.列名x&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line"> FROM &lt;表名1&gt;</span><br><span class="line"> JOIN &lt;表名2&gt;</span><br><span class="line"> ON &lt;表名1.列名x&gt; &#x3D; &lt;表名2.列名x&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>让我们来看三个例子，分别对应三种JOIN的类型。</p>
 </blockquote>
 <blockquote>
 <p>第一个例子，列出课程时包含开设课程的部门详情：</p>
 </blockquote>
-<p>SELECT * FROM course<br> JOIN department<br> ON course.dept_name=department.dept_name;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM course </span><br><span class="line"> JOIN department </span><br><span class="line"> ON course.dept_name&#x3D;department.dept_name;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>第二个例子，列出所有具有前置课程的课程的详情：</p>
 </blockquote>
-<p>SELECT prereq.course_id, title, dept_name, credits, prereq_id<br> FROM prereq<br> LEFT OUTER JOIN course<br> ON prereq.course_id=course.course_id;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT prereq.course_id, title, dept_name, credits, prereq_id </span><br><span class="line"> FROM prereq </span><br><span class="line"> LEFT OUTER JOIN course </span><br><span class="line"> ON prereq.course_id&#x3D;course.course_id;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>最后一个例子，列出所有课程的详情，不管是否具有前置课程：</p>
 </blockquote>
-<p>SELECT course.course_id, title, dept_name, credits, prereq_id<br> FROM prereq<br> RIGHT OUTER JOIN course<br> ON prereq.course_id=course.course_id;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT course.course_id, title, dept_name, credits, prereq_id </span><br><span class="line"> FROM prereq </span><br><span class="line"> RIGHT OUTER JOIN course </span><br><span class="line"> ON prereq.course_id&#x3D;course.course_id;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>视图<br>视图（view）是虚拟的SQL表。它包含行和列，和一般的SQL表格很类似。视图总是显示数据库中的最新数据。</p>
 </blockquote>
-<p>CREATE VIEW</p>
+<p><code>CREATE VIEW</code></p>
 <blockquote>
 <p>创建视图：</p>
 </blockquote>
-<p>CREATE VIEW &lt;视图名&gt; AS<br> SELECT &lt;列名1&gt;, &lt;列名2&gt;, …<br> FROM &lt;表名&gt;<br> WHERE &lt;条件&gt;;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW &lt;视图名&gt; AS</span><br><span class="line"> SELECT &lt;列名1&gt;, &lt;列名2&gt;, …</span><br><span class="line"> FROM &lt;表名&gt;</span><br><span class="line"> WHERE &lt;条件&gt;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>删除视图：</p>
 </blockquote>
-<p>DROP VIEW &lt;视图名&gt;;</p>
+<p><code>DROP VIEW &lt;视图名&gt;;</code></p>
 <blockquote>
 <p>例如，创建3学分的课程视图：</p>
 </blockquote>
-<p>CREATE VIEW my_view AS<br> SELECT * FROM course<br> WHERE credits=3;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW my_view AS</span><br><span class="line"> SELECT * FROM course</span><br><span class="line"> WHERE credits&#x3D;3;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>聚合函数<br>我们之前已经提到聚合函数，这里列出最常用的一些聚合函数：</p>
 </blockquote>
+<blockquote>
 <p>COUNT(列名) 返回行数</p>
+</blockquote>
+<blockquote>
 <p>SUM(列名) 返回指定列的值之和</p>
+</blockquote>
+<blockquote>
 <p>AVG(列名) 返回指定列的平均值</p>
+</blockquote>
+<blockquote>
 <p>MIN(列名) 返回指定列的最小值</p>
+</blockquote>
+<blockquote>
 <p>MAX(列名) 返回指定列的最大值</p>
+</blockquote>
 <blockquote>
 <p>嵌套子查询<br>在SQL请求中，可以嵌套SELECT-FROM-WHERE表达式，称为嵌套子查询（nested subqueries）。<br>例如，查找2009年秋、2010年春都开的课程：</p>
 </blockquote>
-<p>SELECT DISTINCT course_id<br> FROM section<br> WHERE semester = ‘Fall’ AND year= 2009 AND course_id IN (<br> SELECT course_id<br> FROM section<br> WHERE semester = ‘Spring’ AND year= 2010<br>);</p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT course_id</span><br><span class="line"> FROM section</span><br><span class="line"> WHERE semester &#x3D; ‘Fall’ AND year&#x3D; 2009 AND course_id IN (</span><br><span class="line"> SELECT course_id</span><br><span class="line"> FROM section</span><br><span class="line"> WHERE semester &#x3D; ‘Spring’ AND year&#x3D; 2010</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
       
 
       
