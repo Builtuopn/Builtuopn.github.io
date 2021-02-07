@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://builtuopn.github.io">
-  <title>Tag: Spring boot | 小卟卟的博客</title>
+  <title>Linux 命令 --- man | 小卟卟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小卟卟的博客">
-<meta property="og:url" content="https://builtuopn.github.io/tags/Spring-boot/index.html">
+  <meta name="description" content="man 命令可以说是初学 Linux 系统最应该接触的命令了。使用 man 命令，你几乎可以查看任何命令的用户手册简介man 命令的全称叫 “manual”, 是 Linux 下的帮助指令，可用于查看 Linux 中各种指令的帮助信息 语法12345678910111213141516171819202122232425262728293031323334353637383940414243444">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 命令 --- man">
+<meta property="og:url" content="https://builtuopn.github.io/2021/02/06/Linux/Linux02/index.html">
 <meta property="og:site_name" content="小卟卟的博客">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="man 命令可以说是初学 Linux 系统最应该接触的命令了。使用 man 命令，你几乎可以查看任何命令的用户手册简介man 命令的全称叫 “manual”, 是 Linux 下的帮助指令，可用于查看 Linux 中各种指令的帮助信息 语法12345678910111213141516171819202122232425262728293031323334353637383940414243444">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://builtuopn.github.io/images/liunx01.png">
+<meta property="article:published_time" content="2021-02-06T12:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-07T15:28:17.203Z">
 <meta property="article:author" content="小卟卟">
-<meta property="article:tag" content="Java,c,Spring boot,Mysql,Html,小程序">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://builtuopn.github.io/images/liunx01.png">
   
     <link rel="alternative" href="/atom.xml" title="小卟卟的博客" type="application/atom+xml">
   
@@ -179,75 +183,239 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="Linux-Linux/Linux02" class="article article-type-Linux " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-Spring boot">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/02/05/Spring%20boot/Spring%20boot/" class="archive-article-date">
-  	<time datetime="2021-02-05T12:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
-</a>
-
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/02/05/Spring%20boot/Spring%20boot/">Spring boot</a>
+    <h1 class="article-title" itemprop="name">
+      Linux 命令 --- man
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/02/06/Linux/Linux02/" class="archive-article-date">
+  	<time datetime="2021-02-06T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-06</time>
+</a>
+
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="man-命令可以说是初学-Linux-系统最应该接触的命令了。使用-man-命令，你几乎可以查看任何命令的用户手册"><a href="#man-命令可以说是初学-Linux-系统最应该接触的命令了。使用-man-命令，你几乎可以查看任何命令的用户手册" class="headerlink" title="man 命令可以说是初学 Linux 系统最应该接触的命令了。使用 man 命令，你几乎可以查看任何命令的用户手册"></a>man 命令可以说是初学 Linux 系统最应该接触的命令了。使用 man 命令，你几乎可以查看任何命令的用户手册</h1><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>man 命令的全称叫 “manual”, 是 Linux 下的帮助指令，可用于查看 Linux 中各种指令的帮助信息</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">用法： man [选项<span class="string">...</span>] [章节] 手册页<span class="string">...</span></span><br><span class="line"></span><br><span class="line">  -C, <span class="params">--config-file=</span>文件   使用该用户设置文件</span><br><span class="line">  -d, <span class="params">--debug</span>                输出调试信息</span><br><span class="line">  -D, <span class="params">--default</span>              将所有选项都重置为默认值</span><br><span class="line">      <span class="params">--warnings</span>[=警告]    开启 groff 的警告</span><br><span class="line"></span><br><span class="line"> 主要运行模式：</span><br><span class="line">  -f, <span class="params">--whatis</span>               等同于 whatis</span><br><span class="line">  -k, <span class="params">--apropos</span>              等同于 apropos</span><br><span class="line">  -K, <span class="params">--global-apropos</span>       在所有页面中搜索文字</span><br><span class="line">  -l, <span class="params">--local-file</span></span><br><span class="line">                             把“手册页”参数当成本地文件名来解读</span><br><span class="line">  -w, <span class="params">--where</span>, <span class="params">--path</span>, <span class="params">--location</span></span><br><span class="line">                             输出手册页的物理位置</span><br><span class="line">  -W, <span class="params">--where-cat</span>, <span class="params">--location-cat</span></span><br><span class="line">                             输出 cat 文件的物理位置</span><br><span class="line"></span><br><span class="line">  -c, <span class="params">--catman</span>               由 catman 使用，用来对过时的 cat</span><br><span class="line">                             页重新排版</span><br><span class="line">  -R, <span class="params">--recode=</span>编码        以指定编码输出手册页源码</span><br><span class="line"></span><br><span class="line"> 寻找手册页：</span><br><span class="line">  -L, <span class="params">--locale=</span>区域</span><br><span class="line">                             定义本次手册页搜索所采用的区域设置</span><br><span class="line">  -m, <span class="params">--systems=</span>系统       使用来自其它系统的手册页</span><br><span class="line">  -M, <span class="params">--manpath=</span>路径       设置搜索手册页的路径为 PATH</span><br><span class="line"></span><br><span class="line">  -S, -s, <span class="params">--sections=</span>列表  使用以半角冒号分隔的章节列表</span><br><span class="line"></span><br><span class="line">  -e, <span class="params">--extension=</span>扩展</span><br><span class="line">                             将搜索限制在扩展类型为“扩展”的手册页之内</span><br><span class="line"></span><br><span class="line">  -i, <span class="params">--ignore-case</span>          查找手册页时不区分大小写字母</span><br><span class="line">                             <span class="params">(默认)</span></span><br><span class="line">  -I, <span class="params">--match-case</span>           查找手册页时区分大小写字母</span><br><span class="line"></span><br><span class="line">      <span class="params">--regex</span>                显示所有匹配正则表达式的页面</span><br><span class="line">      <span class="params">--wildcard</span>             显示所有匹配通配符的页面</span><br><span class="line"></span><br><span class="line">      <span class="params">--names-only</span>           使得 <span class="params">--regex</span> 和 <span class="params">--wildcard</span></span><br><span class="line">                             仅匹配页面名称，不匹配描述信息</span><br><span class="line"></span><br><span class="line">  -a, <span class="params">--all</span>                  寻找所有匹配的手册页</span><br><span class="line">  -u, <span class="params">--update</span>               强制进行缓存一致性的检查</span><br><span class="line"></span><br><span class="line">      <span class="params">--no-subpages</span>          不要尝试子页面，如“man foo bar” =&gt;</span><br><span class="line">                             “man foo-bar”</span><br><span class="line"></span><br><span class="line"> 控制格式化的输出：</span><br><span class="line">  -P, <span class="params">--pager=PAGER</span>          使用 PAGER 程序显示输出文本</span><br><span class="line">  -r, <span class="params">--prompt=</span>字符串     给 less 分页器提供一个提示行</span><br><span class="line"></span><br><span class="line">  -7, <span class="params">--ascii</span>                显示某些 latin1 字符的 ASCII 翻译形式</span><br><span class="line">  -E, <span class="params">--encoding=</span>编码      使用选中的输出编码</span><br><span class="line">      <span class="params">--no-hyphenation</span>, <span class="params">--nh</span> 关闭连字符</span><br><span class="line">      <span class="params">--no-justification</span>,                              <span class="params">--nj</span>   禁止两端对齐</span><br><span class="line">  -p, <span class="params">--preprocessor=</span>字符串   字符串表示要运行哪些预处理器：</span><br><span class="line">                             e - [n]eqn, p - pic, t - tbl,</span><br><span class="line">g - grap, r - refer, v - vgrind</span><br><span class="line"></span><br><span class="line">  -t, <span class="params">--troff</span>                使用 groff 对手册页排版</span><br><span class="line">  -T, <span class="params">--troff-device</span>[=设备]   使用 groff 的指定设备</span><br><span class="line"></span><br><span class="line">  -H, <span class="params">--html</span>[=浏览器]     使用 www-browser 或指定浏览器显示 HTML</span><br><span class="line">                             输出</span><br><span class="line">  -X, <span class="params">--gxditview</span>[=分辨率]   使用 groff 并通过 gxditview <span class="params">(X11)</span></span><br><span class="line">                             来显示：</span><br><span class="line">                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12</span><br><span class="line">  -Z, <span class="params">--ditroff</span>              使用 groff 并强制它生成 ditroff</span><br><span class="line"></span><br><span class="line">  -?, <span class="params">--help</span>                 显示此帮助列表</span><br><span class="line">      <span class="params">--usage</span>                显示一份简洁的用法信息</span><br><span class="line">  -V, <span class="params">--version</span>              打印程序版本</span><br><span class="line"></span><br><span class="line">选项完整形式所必须用的或是可选的参数，在使用选项缩写形式时也是必须的或是可选的</span><br></pre></td></tr></table></figure>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>使用 man 命令查看 man 命令自己的用户手册</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">man</span> <span class="keyword">man</span></span><br></pre></td></tr></table></figure>
+<p>执行效果:<br><img src="/images/liunx01.png" width="50%" height="50%"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>扫码加交个朋友<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/IMG_0809.JPG">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/IMG_0808.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring boot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Spring-boot//" class="article-tag-list-link color2">Spring boot</a>
+        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://builtuopn.github.io/2021/02/06/Linux/Linux02/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/02/05/WeChat/WeChat/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信小程序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#man-%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E8%AF%B4%E6%98%AF%E5%88%9D%E5%AD%A6-Linux-%E7%B3%BB%E7%BB%9F%E6%9C%80%E5%BA%94%E8%AF%A5%E6%8E%A5%E8%A7%A6%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BA%86%E3%80%82%E4%BD%BF%E7%94%A8-man-%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BD%A0%E5%87%A0%E4%B9%8E%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E4%BB%BB%E4%BD%95%E5%91%BD%E4%BB%A4%E7%9A%84%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C"><span class="toc-number">1.</span> <span class="toc-text">man 命令可以说是初学 Linux 系统最应该接触的命令了。使用 man 命令，你几乎可以查看任何命令的用户手册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Linux/Linux02" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvi5Ho9N",
+        conf: "163cc9844abc529bfc7bd1489a0c066d"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
+  <!-- 自动推送百度-->
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
           </div>
         </div>
       </div>
@@ -309,9 +477,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
