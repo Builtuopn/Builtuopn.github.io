@@ -4,21 +4,21 @@
   <url>
     <loc>https://builtuopn.github.io/2021/02/05/Spring%20boot/Spring%20boot/</loc>
     
-    <lastmod>2021-02-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/2021/02/06/Linux/Linux02/</loc>
-    
-    <lastmod>2021-02-07</lastmod>
+    <lastmod>2021-02-14</lastmod>
     
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/2021/02/05/WeChat/WeChat/</loc>
     
-    <lastmod>2021-02-06</lastmod>
+    <lastmod>2021-02-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/2021/02/06/Linux/Linux02/</loc>
+    
+    <lastmod>2021-02-14</lastmod>
     
   </url>
   
@@ -67,6 +67,13 @@
   </url>
   
   <url>
+    <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://builtuopn.github.io/tags/Linux/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
@@ -87,17 +94,17 @@
     <priority>0.6</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
+    <loc>https://builtuopn.github.io/categories/MySQL/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://builtuopn.github.io/categories/MySQL/</loc>
+    <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -119,13 +126,6 @@
   
   <url>
     <loc>https://builtuopn.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
