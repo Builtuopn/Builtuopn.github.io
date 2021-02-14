@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://builtuopn.github.io/2021/02/05/Spring%20boot/Spring%20boot/</loc>
+    <loc>https://builtuopn.github.io/2021/02/05/WeChat/WeChat/</loc>
     
     <lastmod>2021-02-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://builtuopn.github.io/2021/02/05/WeChat/WeChat/</loc>
+    <loc>https://builtuopn.github.io/2021/02/05/Spring%20boot/Spring%20boot/</loc>
     
     <lastmod>2021-02-14</lastmod>
     
@@ -67,13 +67,6 @@
   </url>
   
   <url>
-    <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://builtuopn.github.io/tags/Linux/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
@@ -82,6 +75,13 @@
   
   <url>
     <loc>https://builtuopn.github.io/tags/Java-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -104,13 +104,6 @@
   </url>
   
   <url>
-    <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://builtuopn.github.io/categories/Linux/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
@@ -119,6 +112,13 @@
   
   <url>
     <loc>https://builtuopn.github.io/categories/Java-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
     <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
