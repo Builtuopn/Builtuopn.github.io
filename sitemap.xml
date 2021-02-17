@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://builtuopn.github.io/2021/02/05/title/</loc>
+    
+    <lastmod>2021-02-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://builtuopn.github.io/2021/02/05/WeChat/WeChat/</loc>
     
     <lastmod>2021-02-14</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://builtuopn.github.io/2021/02/06/Linux/Linux02/</loc>
     
     <lastmod>2021-02-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/2021/02/05/title/</loc>
-    
-    <lastmod>2021-02-06</lastmod>
     
   </url>
   
@@ -53,7 +53,7 @@
 
   <url>
     <loc>https://builtuopn.github.io/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,35 +61,35 @@
   
   <url>
     <loc>https://builtuopn.github.io/tags/MySQL/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/tags/Linux/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/tags/Java-%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/tags/Linux/</loc>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/tags/Spring-boot/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,35 +98,35 @@
   
   <url>
     <loc>https://builtuopn.github.io/categories/MySQL/</loc>
-    <lastmod>2021-02-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://builtuopn.github.io/categories/Linux/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/categories/Java-%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/categories/Linux/</loc>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/categories/Spring-boot/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://builtuopn.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2021-02-14</lastmod>
+    <lastmod>2021-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
