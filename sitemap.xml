@@ -60,13 +60,6 @@
 
   
   <url>
-    <loc>https://builtuopn.github.io/tags/Linux/</loc>
-    <lastmod>2021-03-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://builtuopn.github.io/tags/MySQL/</loc>
     <lastmod>2021-03-19</lastmod>
     <changefreq>daily</changefreq>
@@ -75,6 +68,13 @@
   
   <url>
     <loc>https://builtuopn.github.io/tags/Java-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-03-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/tags/Linux/</loc>
     <lastmod>2021-03-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -97,13 +97,6 @@
 
   
   <url>
-    <loc>https://builtuopn.github.io/categories/Linux/</loc>
-    <lastmod>2021-03-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://builtuopn.github.io/categories/MySQL/</loc>
     <lastmod>2021-03-19</lastmod>
     <changefreq>daily</changefreq>
@@ -112,6 +105,13 @@
   
   <url>
     <loc>https://builtuopn.github.io/categories/Java-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-03-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://builtuopn.github.io/categories/Linux/</loc>
     <lastmod>2021-03-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
